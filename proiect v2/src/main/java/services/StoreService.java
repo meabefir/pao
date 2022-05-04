@@ -34,10 +34,12 @@ public class StoreService {
     }
 
     public List<Game> getMostPopular() {
+        LoggerService.getInstance().log("Fetched most popular games.");
         return new ArrayList<>(games);
     }
 
     public List<Game> getByCategory(GameCategory gc) {
+        LoggerService.getInstance().log("Fetched games in category " + gc);
         return getByCategory(Arrays.asList(new GameCategory[]{gc}));
     }
 
@@ -62,6 +64,8 @@ public class StoreService {
 
             game.addWishlist(user);
             user.wishlistGame(game);
+
+            LoggerService.getInstance().log("User " + user.getUsername() + " wishlisted " + game.getTitle());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -73,6 +77,7 @@ public class StoreService {
                 throw new GameNotFoundException();
             }
             game.goOnSale();
+            LoggerService.getInstance().log("Game " + game.getTitle() + " is on sale.");
         } catch (StoreServiceException e) {
             System.out.println(e.getMessage());
         }
@@ -91,6 +96,7 @@ public class StoreService {
             Card mainCard = user.getMainCard();
             mainCard.buy(game);
             user.removeFromWishlist(game);
+            LoggerService.getInstance().log("User " + user.getUsername() + " bought " + game.getTitle());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

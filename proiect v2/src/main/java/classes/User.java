@@ -1,5 +1,6 @@
 package classes;
 
+import CSV.CSVSerialize;
 import design_patterns.Observable;
 import design_patterns.Observer;
 import exceptions.user.NoCardsException;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class User implements Observer {
+public class User implements Observer, CSVSerialize {
     @Builder.Default
     private List<Purchasable> library = new ArrayList<>();
     private String username;
@@ -66,6 +67,11 @@ public class User implements Observer {
 
     public void addPurchase(Purchasable purchasable) {
         library.add(purchasable);
+    }
+
+    @Override
+    public String serialize() {
+        return username + ", " + password + "\n";
     }
 }
 

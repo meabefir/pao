@@ -1,6 +1,8 @@
 package classes;
 
+import CSV.CSVSerialize;
 import enums.CardType;
+import enums.Currency;
 import exceptions.card.CardWithNoUserException;
 import exceptions.card.NotEnoughFundsException;
 import lombok.Builder;
@@ -8,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class Card {
+public class Card implements CSVSerialize {
     private User user;
     private String number;
     private String pin;
@@ -37,5 +39,10 @@ public class Card {
                 ", currency=" + currency +
                 ", funds=" + funds +
                 '}';
+    }
+
+    @Override
+    public String serialize() {
+        return number + ", " + pin + ", " + type + ", " + currency + ", " + funds + "\n";
     }
 }

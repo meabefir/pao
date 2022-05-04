@@ -37,6 +37,7 @@ public class UserService {
             }
 
             user.addCard(card);
+            LoggerService.getInstance().log("Added card with number " + card.getNumber() + " for user " + user.getUsername());
         } catch (UserServiceException e) {
             System.out.println(e.getMessage());
         }
@@ -57,6 +58,8 @@ public class UserService {
             }
             users.put(user.getUsername(), user);
             user.setLoggedIn(true);
+
+            LoggerService.getInstance().log("Registered user " + user.getUsername());
         } catch (InvalidUsernameException e) {
             System.out.println(e.getMessage());
         }
@@ -72,6 +75,7 @@ public class UserService {
             }
 
             user.setLoggedIn(true);
+            LoggerService.getInstance().log("Logged user " + user.getUsername());
         } catch (UserServiceException e) {
             System.out.println(e.getMessage());
         }
@@ -87,6 +91,7 @@ public class UserService {
             }
 
             user.setLoggedIn(false);
+            LoggerService.getInstance().log("Logged out user " + user.getUsername());
         } catch (UserServiceException e) {
             System.out.println(e.getMessage());
         }
