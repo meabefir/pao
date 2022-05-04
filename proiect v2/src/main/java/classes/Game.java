@@ -1,6 +1,6 @@
 package classes;
 
-import design_patterns.Observable;
+import CSV.CSVSerialize;
 import enums.GameCategory;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @SuperBuilder
-public class Game extends Purchasable implements Comparable<Game> {
+public class Game extends Purchasable implements Comparable<Game>, CSVSerialize {
     private String title;
     private Integer rating;
     private GameSpecs minSpecs;
@@ -47,5 +47,11 @@ public class Game extends Purchasable implements Comparable<Game> {
 
     public void goOnSale() {
         wishlist.notifyObservers(this);
+    }
+
+    @Override
+    public String serialize() {
+        return this.title + ", " + this.rating + ", " +
+                this.minSpecs.serialize() + ", " + this.recommendedSpecs.serialize() + ", " + this.price + "\n";
     }
 }
