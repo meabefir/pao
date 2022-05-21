@@ -1,0 +1,12 @@
+Game Game{title='CS:GO', rating=88, minSpecs=GameSpecs(ram=GB4, gpu=GTX1050, cpu=I3), recommendedSpecs=GameSpecs(ram=GB8, gpu=GTX1050, cpu=I5), categories=[FPS, MULTIPLAYER, SHOOTER], reviews=[], price=0.0} added to store. 2022-05-21 at 20:54:42 EEST
+Game Game{title='Terraria', rating=98, minSpecs=GameSpecs(ram=GB2, gpu=GTX1050, cpu=I3), recommendedSpecs=GameSpecs(ram=GB4, gpu=GTX1050, cpu=I5), categories=[SANDBOX, ADVENTURE], reviews=[], price=9.99} added to store. 2022-05-21 at 20:54:42 EEST
+Game Game{title='Rust', rating=91, minSpecs=GameSpecs(ram=GB8, gpu=GTX1050, cpu=I3), recommendedSpecs=GameSpecs(ram=GB16, gpu=GTX2070, cpu=I7), categories=[SURVIVAL, ACTION, FPS], reviews=[], price=30.0} added to store. 2022-05-21 at 20:54:42 EEST
+Game Game{title='Portal2', rating=98, minSpecs=GameSpecs(ram=GB4, gpu=GTX1050, cpu=I3), recommendedSpecs=GameSpecs(ram=GB8, gpu=GTX1050, cpu=I5), categories=[PUZZLE, MULTIPLAYER, COOP], reviews=[], price=19.99} added to store. 2022-05-21 at 20:54:42 EEST
+Fetched most popular games. 2022-05-21 at 20:54:42 EEST
+Registered user meabefir 2022-05-21 at 20:54:42 EEST
+Logged out user meabefir 2022-05-21 at 20:54:42 EEST
+Logged user meabefir 2022-05-21 at 20:54:42 EEST
+Added card with number 1234-1234-5555-6666 for user meabefir 2022-05-21 at 20:54:42 EEST
+User meabefir wishlisted Terraria 2022-05-21 at 20:54:42 EEST
+Game Terraria is on sale. 2022-05-21 at 20:54:42 EEST
+User meabefir bought Terraria 2022-05-21 at 20:54:42 EEST
